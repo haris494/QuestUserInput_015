@@ -67,4 +67,10 @@ fun FormDataDiri(modifier: Modifier
                 Text(text = item)
             }
         }
-    }   
+    }
+    OutlinedTextField(
+        value = textAlamat,
+        singleLine = true,
+        modifier = Modifier.width(width = 250.dp),
+
+
