@@ -8,4 +8,5 @@ import androidx.compose.ui.Modifier
 @Composable
 fun UserInput(modifier: Modifier = Modifier) {
     var nama by remember { mutableStateOf("") }
+    var alamat by remember { mutableStateOf("") }
 }
