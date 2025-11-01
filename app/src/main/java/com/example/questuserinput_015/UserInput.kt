@@ -11,4 +11,6 @@ fun UserInput(modifier: Modifier = Modifier) {
     var alamat by remember { mutableStateOf("") }
     var jenisKelamin by remember { mutableStateOf("") }
     var status by remember { mutableStateOf("") }
+
+    val listGender = listOf("Laki-laki", "Perempuan")
 }
