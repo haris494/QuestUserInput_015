@@ -1,4 +1,5 @@
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -57,6 +58,9 @@ fun UserInput(modifier: Modifier = Modifier) {
             elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
+            Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+
+            }
 
     }
 }
