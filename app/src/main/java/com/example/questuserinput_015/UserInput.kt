@@ -95,6 +95,20 @@ fun UserInput(modifier: Modifier = Modifier) {
                 }
 
 
+                Column {
+                    Text("Status Perkawinan", fontWeight = FontWeight.SemiBold)
+                    listStatus.forEach { s ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier
+                                .selectable(
+                                    selected = (status == s),
+                                    onClick = { status = s }
+                                )
+                                .padding(vertical = 4.dp)
+                        ) {
+
+
             }
 
             }
