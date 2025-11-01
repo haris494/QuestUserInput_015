@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
@@ -107,11 +108,55 @@ fun UserInput(modifier: Modifier = Modifier) {
                                 )
                                 .padding(vertical = 4.dp)
                         ) {
+                            RadioButton(
+                                selected = (status == s),
+                                onClick = { status = s }
+                            )
+                            Text(s)
+                        }
+                    }
+                }
 
 
+                OutlinedTextField(
+                    value = alamat,
+                    onValueChange = { alamat = it },
+                    label = { Text("Alamat") },
+                    placeholder = { Text("Masukkan alamat lengkap") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+
+                Button(
+                    onClick = {},
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp),
+                    enabled = nama.isNotEmpty() && alamat.isNotEmpty()
+                ) {
+                    Text("Kirim", fontSize = 18.sp)
+                }
             }
+        }
 
+
+        if (nama.isNotEmpty()) {
+            Spacer(modifier = Modifier.height(20.dp))
+            ElevatedCard(
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFF2F2F2)),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text("📋 Data Pendaftar", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text("Nama: $nama")
+                    Text("Jenis Kelamin: $jenisKelamin")
+                    Text("Status: $status")
+                    Text("Alamat: $alamat")
+                }
             }
-
+        }
     }
 }
+
+
