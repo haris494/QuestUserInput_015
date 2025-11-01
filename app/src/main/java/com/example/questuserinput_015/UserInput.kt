@@ -10,6 +10,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -59,6 +60,17 @@ fun UserInput(modifier: Modifier = Modifier) {
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
             Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+
+
+                OutlinedTextField(
+                    value = nama,
+                    onValueChange = { nama = it },
+                    label = { Text("Nama Lengkap") },
+                    placeholder = { Text("Masukkan nama lengkap") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
 
             }
 
